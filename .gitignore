@@ -24,6 +24,9 @@
 hs_err_pid*
 replay_pid*
 
+.vscode/*
+!.vscode/settings.json
+
 ### Maven ###
 target/
 pom.xml.tag

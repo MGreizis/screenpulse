@@ -1,0 +1,8 @@
+#AnchorPane {
+  -fx-background-color: #f0f0f0; /* Set background color */
+}
+
+Button {
+  -fx-font-size: 14px;
+  -fx-padding: 10px 20px; /* Adjust button padding */
+}
