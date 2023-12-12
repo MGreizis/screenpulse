@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class App extends Application {
 
-    private static Scene scene;
+    public static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -30,6 +30,15 @@ public class App extends Application {
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
+    }
+
+    public static <T> T getController(Parent root, Class<T> controllerClass) {
+        FXMLLoader loader = (FXMLLoader) root.getProperties().get(FXMLLoader.class.getName());
+        if (loader != null) {
+            return loader.getController();
+        } else {
+            throw new IllegalStateException("FXMLLoader is missing in the root");
+        }
     }
 
     public static void main(String[] args) {

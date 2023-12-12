@@ -8,6 +8,7 @@
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.screenpulse.TrackingPageController" stylesheets="styles.css">
     <children>
         <Label text="Tracking" />
+        <Label fx:id="activeAppLabel" text="" />
         <Button fx:id="startPageButton" text="Go back to Start Page" onAction="#switchToStartPage" />
     </children>
 </VBox>
