@@ -2,18 +2,19 @@ package com.screenpulse;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import java.io.IOException;
 
 public class StartPageController {
 
     @FXML
-    private void onStartButtonClick(ActionEvent event) {
+    private void onStartButtonClick(ActionEvent event) throws IOException {
         System.out.println("Start Tracking button clicked!");
-        // Add code to transition to the tracking view or perform relevant actions
+        App.setRoot("TrackingPage");
     }
 
     @FXML
-    private void onSettingsButtonClick(ActionEvent event) {
+    private void onSettingsButtonClick(ActionEvent event) throws IOException {
         System.out.println("Settings button clicked!");
-        // Add code to transition to the settings view or perform relevant actions
+        App.setRoot("SettingsPage");
     }
 }
